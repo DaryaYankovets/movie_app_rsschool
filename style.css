@@ -1,0 +1,111 @@
+:root {
+    --color-darkGrey: #393E46;
+    --color-lightGrey: #EEEEEE;
+    --color-green: #00ADB5;
+    --color-grey-blue-dark: #21325E;
+    --color-grey-blue-light: #3E497A;
+    --color-yellow: #F1D00A;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-grey-blue-light);
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* ----------Start styles Header------------- */
+.container-header {
+    width: 100%;
+    height: 90px;
+    background-color: var(--color-grey-blue-dark);
+}
+
+.search {
+    float: right;
+    margin: 20px;
+    outline: none;
+}
+/* ----------End styles Header------------- */
+
+/* ----------Start styles Main------------- */
+.container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.item-film {
+    position: relative;
+    margin: 20px 10px;
+    width: 280px;
+    height: 465px;
+    border-radius: 15px;
+}
+
+.item-film:hover .item-description{
+    display: block;
+}
+
+.item-description {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    display: none;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    background-color: var(--color-lightGrey);
+    border-radius: 15px;
+    font-size: 18px;
+    overflow: auto;
+}
+
+.item-img {
+    width: 100%;
+    height: 85%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 15px 15px 0 0;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: space-around;
+    height: 15%;
+    border-radius: 0 0 15px 15px;
+    background-color:  var(--color-yellow);
+    color: var(--color-grey-blue-dark);
+}
+
+.item-footer-title {
+    flex-basis: 80%;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.item-footer-vote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 20%;
+    font-size: 25px;
+}
+.vote {
+    padding: 0 5px;
+    background-color: var(--color-grey-blue-light);
+    color: var(--color-lightGrey);
+    border-radius: 10px;
+}
+/* ----------End styles Main------------- */
+
+/* ----------Start styles Footer------------- */
+.container-footer {
+    width: 100%;
+}
+/* ----------End styles Footer------------- */
