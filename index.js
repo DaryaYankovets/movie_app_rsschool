@@ -30,10 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
                  </div>
                  <div class="item-description">${elem.overview}</div>`, 
                 'item-film');
-            //document.querySelector() .style.backgroundImage = ;
-          
-            //console.log(`url: "https://image.tmdb.org/t/p/w1280${elem.poster_path}"`);
-            //itemFilm.style.border = '1px solid green';
+
             mainContainer.append(itemFilm);
             console.log(elem.poster_path);
         });
