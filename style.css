@@ -21,17 +21,126 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-lightGrey);
+}
+
+ul {
+    list-style-type: none;
+}
+
 /* ----------Start styles Header------------- */
 .container-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 100px;
     background-color: var(--color-grey-blue-dark);
 }
 
-.search {
-    float: right;
-    margin: 15px;
+.header-nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 60px;
+    flex-basis: 80%;
+    font-size: 35px;
+    color: var(--color-lightGrey);
+    cursor: pointer;
+}
+
+.header-nav li {
+    position: relative;
+    margin-right: 30px;
+}
+
+.block-year {
+    position: absolute;
+    z-index: 3;
+    top: 50px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    width: 140px;
+    height: auto;
+    border-radius: 15px;
+    background-color: var(--color-lightGrey);
+    color: var(--color-darkGrey);
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.55s opacity, 0.55s visibility;
+}
+
+.block-year li {
+    margin-bottom: 5px;
+}
+
+.block-genres {
+    position: absolute;
+    z-index: 3;
+    top: 50px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+    width: 170px;
+    height: auto;
+    border-radius: 15px;
+    background-color: var(--color-lightGrey);
+    color: var(--color-darkGrey);
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.55s opacity, 0.55s visibility;
+}
+
+.nav-genres:hover .block-genres {
+    opacity: 1;
+    visibility: visible;
+} 
+
+.block-genres li:hover {
+    color: var(--color-yellow);
+    transition: 0.3s;
+}
+
+.block-year li:hover {
+    color: var(--color-yellow);
+    transition: 0.3s;
+}
+
+.nav-year:hover .block-year {
+    opacity: 1;
+    visibility: visible;
+}
+
+.yearInput {
+    padding: 5px;
+    width: 100%;
+    border-radius: 50px;
+    border: 3px solid var(--color-yellow);
+    outline: none;
+    font-size: 20px;
+}
+
+.yearInput::placeholder {
+    color: var(--color-yellow);
+    padding-left: 10px;
+}
+
+
+.searchInput {
+    margin-right: 50px;
     padding: 20px;
+    flex-basis: 20%;
     width: 300px;
     border-radius: 50px;
     background-color: var(--color-grey-blue-light);
@@ -41,11 +150,11 @@ body {
     font-size: 20px;
 }
 
-.search:hover, .search:active {
+.searchInput:hover, .searchInput:active {
     box-shadow: 1px 0 40px 2px #0ff;
 }
 
-.search::placeholder {
+.searchInput::placeholder {
     color: var(--color-grey-blue-dark);
     font-weight: bold;
 }
@@ -68,23 +177,26 @@ body {
     border-radius: 15px;
 }
 
-.item-film:hover .item-description{
-    display: block;
-}
-
 .item-description {
     position: absolute;
     z-index: 3;
-    bottom: 0;
-    display: none;
-    padding: 15px;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
+    bottom: -5px;
+    padding: 0 15px;
+    width: 100%;
+    height: 0;
     background-color: var(--color-lightGrey);
     border-radius: 15px;
     font-size: 18px;
-    overflow: auto;
+    overflow: hidden;
+    transition: 0.3s linear;
+    box-sizing: border-box;
+}
+
+
+.item-film:hover .item-description{
+    padding: 15px;
+    height: auto;
+    max-height: 100%;  
 }
 
 .item-img {
@@ -108,6 +220,7 @@ body {
     flex-basis: 80%;
     padding: 5px 10px;
     font-size: 20px;
+    overflow: hidden;
 }
 
 .item-footer-vote {
@@ -121,7 +234,7 @@ body {
     padding: 0 5px;
     background-color: var(--color-grey-blue-light);
     color: var(--color-lightGrey);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 /* ----------End styles Main------------- */
 

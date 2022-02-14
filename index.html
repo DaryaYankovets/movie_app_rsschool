@@ -12,9 +12,29 @@
 </head>
 <body>
     <header class="container-header">
-        <form action="">
-            <input class="search" type="text" placeholder="Search...">
-        </form>   
+        <ul class="header-nav">
+            <li class="nav-popular">
+                Popular
+            </li>
+            <li class="nav-year">
+                Year
+                <ul class="block-year">
+                    <li class="item-year">2022</li>
+                    <li class="item-year">2021</li>
+                    <li class="item-year">2019</li>
+                    <li class="item-year">2018</li>
+                    <li>
+                        <input type="text" class="yearInput" placeholder="Year...">
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-genres">
+                Genres
+                <ul class="block-genres"></ul>   
+            </li>
+        </ul>
+        <input class="searchInput" type="search" autocomplete="off" placeholder="Search..." autofocus />
+        
     </header>
 
     <main class="container-main">
