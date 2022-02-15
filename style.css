@@ -59,6 +59,11 @@ ul {
     margin-right: 30px;
 }
 
+.header-nav li:hover {
+    color: var(--color-yellow);
+    transition: 0.4s;
+}
+
 .block-year {
     position: absolute;
     z-index: 3;
@@ -155,13 +160,48 @@ ul {
 }
 
 .searchInput::placeholder {
-    color: var(--color-grey-blue-dark);
+    color: var(--color-yellow);
     font-weight: bold;
+    opacity: 0.6;
 }
 /* ----------End styles Header------------- */
 
 /* ----------Start styles Main------------- */
 .container-main {
+    width: 100vw;
+}
+
+.search-values {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 0;
+    background-color: var(--color-yellow);
+    transition: 0.4s;
+}
+
+.active-search-values {
+    width: 100%;
+    height: 40px; 
+}
+
+.search-values div {
+    margin-left: 50px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-lightGrey);
+    background-color: var(--color-grey-blue-light);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cross {
+    text-decoration: line-through;
+    color: var(--color-yellow);
+}
+
+.list-films {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,25 +215,32 @@ ul {
     width: 280px;
     height: 465px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .item-description {
     position: absolute;
     z-index: 3;
     bottom: -5px;
-    padding: 0 15px;
     width: 100%;
     height: 0;
     background-color: var(--color-lightGrey);
     border-radius: 15px;
     font-size: 18px;
-    overflow: hidden;
-    transition: 0.3s linear;
+    overflow: auto;
     box-sizing: border-box;
+    transition: 0.5s ; 
+    transition-property: height;
+    transition-duration: 4s;
+    transition-delay: 1s;
 }
 
 
 .item-film:hover .item-description{
+    transition-property: height;
+    transition-duration: 4s;
+    transition-delay: 1s;
+ 
     padding: 15px;
     height: auto;
     max-height: 100%;  
@@ -238,8 +285,3 @@ ul {
 }
 /* ----------End styles Main------------- */
 
-/* ----------Start styles Footer------------- */
-.container-footer {
-    width: 100%;
-}
-/* ----------End styles Footer------------- */
