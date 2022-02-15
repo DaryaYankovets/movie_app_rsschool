@@ -57,11 +57,27 @@ ul {
 .header-nav li {
     position: relative;
     margin-right: 30px;
+    padding: 2px 10px;
 }
 
 .header-nav li:hover {
-    color: var(--color-yellow);
-    transition: 0.4s;
+    color: var(--color-grey-blue-dark);
+    transition: 0.4s;  
+}
+
+.item-nav {
+    background-image: linear-gradient(var(--color-yellow), var(--color-yellow));
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 0.9s;
+    border-radius: 20px;
+}
+
+.item-nav:hover {
+    color: var(--color-lightGrey);
+    background-size: 100% 100%;
+    background-position-x: left;
 }
 
 .block-year {
