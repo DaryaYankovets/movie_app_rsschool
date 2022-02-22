@@ -6,4 +6,6 @@
 * CSS
 * JavaScript
 
-Movies API: TMDB API https://www.themoviedb.org/documentation/api
+Used movies API: TMDB API https://www.themoviedb.org/documentation/api
+
+https://rolling-scopes-school.github.io/daryayankovets-JSFEPRESCHOOL/movie-app/
